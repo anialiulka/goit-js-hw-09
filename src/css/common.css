@@ -16,3 +16,25 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  gap: 20px;
+  width: min-content;
+  margin-top: 20px;
+  padding: 30px 20px;
+  border: 5px solid #914d76;
+
+  color: #69353f;
+  background-color: #cef7a0;
+
+  text-transform: uppercase;
+  font-family: 'Pangolin', cursive;
+  font-size: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
