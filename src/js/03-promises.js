@@ -14,7 +14,6 @@ formEl.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   handleInput();
-  console.log(data);
   for (let i = 1; i <= data.amount; i += 1) {
     createPromise(i, data.delay)
       .then(({ position, delay }) => {

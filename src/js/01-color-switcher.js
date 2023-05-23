@@ -8,6 +8,8 @@ const buttonStartGenerating = document.querySelector('[data-start]');
 const buttonStopGenerating = document.querySelector('[data-stop]');
 const bodyEl = document.querySelector('body');
 
+let timerId = null;
+
 buttonStopGenerating.disabled = true;
 
 buttonStartGenerating.addEventListener('click', onClickStartGenerating);
