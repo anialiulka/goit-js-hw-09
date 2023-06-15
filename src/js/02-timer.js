@@ -7,6 +7,7 @@ const daysField = document.querySelector('[data-days]');
 const hoursField = document.querySelector('[data-hours]');
 const minutesField = document.querySelector('[data-minutes]');
 const secondsField = document.querySelector('[data-seconds]');
+const inputFormEL = document.querySelector('#datetime-picker');
 
 buttonStartEl.disabled = true;
 
@@ -42,12 +43,14 @@ function onStartButtonCLick() {
   const selectedDate = countdownTimer.selectedDates[0];
   const timerId = setInterval(() => {
     const remainingTime = selectedDate.getTime() - currentTime;
-
+    buttonStartEl.disabled = true;
+    inputFormEL.disabled = true;
     if (remainingTime > 0) {
       updateDisplay(remainingTime);
     } else {
       clearInterval(timerId);
       updateDisplay(0);
+      inputFormEL.disabled = false;
     }
   }, 1000);
 }
